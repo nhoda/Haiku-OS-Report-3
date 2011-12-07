@@ -14,7 +14,6 @@ Services left to describe:
 -notification_server
 -media_addon_server
 
-
 Haiku ps output (minus Terminal, bash, ps):
 -------------------------------------------
 Team                                                  Id #Threads
