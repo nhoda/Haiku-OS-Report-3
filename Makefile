@@ -25,7 +25,7 @@ MPSS = ${SRCS-mp:.mp=.mps}
 
 CLEANFILES = ${shell find . -name '*.log' -o -name '*.mpx' -o -name '*.mps' \
 			-o -name '*.aux' -o -name '*.pdf' -o -name '*.bbl' \
-			-o -name '*.blg' -o -name '*.dvi' }
+			-o -name '*.blg' -o -name '*.dvi' -o -name '*.bak' }
 
 all: pdf
 

@@ -3,4 +3,5 @@
 *.blg
 *.log
 *.pdf
+*.bak
 figs/*.mps

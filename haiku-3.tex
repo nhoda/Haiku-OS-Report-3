@@ -51,7 +51,7 @@ compatibility.  However, despite having a devoted niche user base, it
 could not yield a profit for Be, Inc. and, in 2001, was acquired by
 Palm, Inc., ending further BeOS development \cite{BeosWiki}.
 
-Disapointed with the loss, a group of BeOS enthusiasts began an
+Disappointed with the loss, a group of BeOS enthusiasts began an
 effort to rewrite BeOS as a free and open source project
 \cite{BeosWiki, HaikuHistoryWiki}.  In 2004 the open source effort was
 renamed Haiku, after the three line Japanese form of poetry which
@@ -61,7 +61,7 @@ HaikuHistoryWiki}.
 Haiku takes its inspiration from BeOS \cite{HaikuAbout} and aims to
 recreate both the BeOS technologies and end user experience
 \cite{HaikuFaq}.  Haiku uses the same window decoration style and
-colour as BeOS \cite{HaikuWiki, BeosWiki} and aims to create a
+color as BeOS \cite{HaikuWiki, BeosWiki} and aims to create a
 unified, cohesive user interface \cite{HaikuAbout, HaikuHIG,
 HaikuIcon} reflecting the ``core qualities'' of ``elegance'' and
 ``simplicity'' found in BeOS \cite{HaikuFaq}.  Haiku also directly
@@ -71,7 +71,7 @@ Be, Inc. in 2001 \cite{HaikuFaq}.  Haiku also reimplements the
 object-oriented C++ BeOS API\cite{HaikuWiki} as well as the Be File
 System with, its advanced meta-data capabilities \cite{BFSWiki}.
 
-Haiku is targetted towards the personal computer user
+Haiku is targeted towards the personal computer user
 \cite{HaikuAbout}.  As such, it includes a fully integrated GUI
 environment, rejecting the stacked nature of the X Window System on
 UNIX-like operating systems \cite{HaikuFaq}.  The personal computing
@@ -96,7 +96,7 @@ building of 3rd party open-source software and a full package
 management system to manage installation and dependency resolution of
 3rd party software \cite{HaikuR1A3Notes}.
 
-Haiku development is centred around the Haiku Project, an
+Haiku development is centered around the Haiku Project, an
 international community of volunteers \cite{HaikuAbout}.  The project
 maintains mailing lists, forums, IRC channels, \cite{HaikuComm} source
 code repositories \cite{HaikuGetSvn} and several websites, including
@@ -165,7 +165,7 @@ code repository \cite{HaikuGetSvn} and nightly snapshot builds are
 available as downloadable images from the Haiku Files archive
 \cite{HaikuFiles}.
 
-The Haiku release (anyboot) is approximately 250MB in size compressed
+The Haiku release (Anyboot) is approximately 250MB in size compressed
 \cite{HaikuGet} and 700MB uncompressed.  The installed system also
 takes up about 700MB of disk space, not including the size of a swap
 file, which is 2GB by default.  The source distribution is split into
@@ -259,15 +259,15 @@ desktop card solved the problem immediately.
 \centering
 \includegraphics[width=0.9\textwidth]{figs/using-quake-download.png}
 \caption{WebPositive, the Haiku web browser, downloading Quake II from
-  Haikuware.}
+  HaikuWare.}
 \label{fig:using-quake-download}
 \end{figure}
 
 A user looking to expand their selection of installed software will
-likely end up at the site Haikuware (located at
+likely end up at the site HaikuWare (located at
 http://www.haikuware.com).  Considering my resounding disinterest in
 word-processing or productivity programs, I decided to hunt down a
-Haiku-compatible version of a classic favourite of mine, id Software's
+Haiku-compatible version of a classic favorite of mine, id Software's
 Quake II (\figref{using-quake-download}).  Interestingly enough, the
 claim from the download page at Haikuware for Quake II claims it is
 the same version that used to be found on BeDepot.
@@ -552,7 +552,7 @@ of the 2.2.5 version of glibc was imported into the Haiku fork
 also brought in on a piecemeal basis \cite{HaikuLibrootGlibcRecent} so
 it's difficult to specify exactly which upstream version Haiku's glibc
 is derived from.  The logs also indicate much local modification of
-glibc.  Of course, a C library was necessary for Haiku to reimpliment
+glibc.  Of course, a C library was necessary for Haiku to reimplement
 the BeOS API.  The GNU libc was most likely chosen over a BSD libc
 because BeOS itself included GNU libc \cite{GlibCWiki}.
 
@@ -561,7 +561,7 @@ Haiku provides its own GUI Foundation in \texttt{app\_server} and so
 does not require a 3rd party package such as x.org.
 
 \paragraph{GUI Toolkits}
-Haiku also provides its own GUI Toolkit in its reimplimentation of the
+Haiku also provides its own GUI Toolkit in its reimplementation of the
 BeOS APIs.
 
 \paragraph{Shells}
@@ -579,7 +579,7 @@ etc.), GNU tar, GNU sed, GNU grep, OpenSSH, p7zip, GNU make and bzip2.
 Of these, recursive diffs and patch files \cite{HaikuR1A3Src} indicate
 that only coreutils had any sizable modifications.  There, most of the
 changes had to do with adding support for copying file meta data known
-as ``attribututes,'' a special feature of the BFS filesystem
+as ``attributes,'' a special feature of the BFS filesystem
 \cite{BFSWiki}.  The other utilities were either unmodified or
 modified just for porting purposes with the addition of preprocessor
 defines.
@@ -610,7 +610,7 @@ sourced BeOS Mail application \cite{BeMailOpenSourced} which it
 appears Be, Inc. released in 2001 \cite{BeMailLICENSE}.  The Haiku
 version has been modified to support multiple accounts
 \cite{BeMailOpenSourced}.  This software was included in Haiku to help
-fulfil Haiku's goal of reimplimenting the BeOS experience.
+fulfill Haiku's goal of reimplementing the BeOS experience.
 
 \paragraph{Build Tools}
 In order to maintain both backwards compatibility with BeOS R5
