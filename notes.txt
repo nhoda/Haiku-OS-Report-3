@@ -1,0 +1,5 @@
+-explain all acronyms on first use
+-explain what "diff" means
+-bibtex link to references / url links
+-make sure all command names use typewriter text
+-use ps to find all processes and include them in init section
