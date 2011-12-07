@@ -1,5 +1,22 @@
--explain all acronyms on first use
--explain what "diff" means
--bibtex link to references / url links
--make sure all command names use typewriter text
--use ps to find all processes and include them in init section
+-make sure all command names use typewriter text (e.g. \texttt{diff})
+-describe all the following processes in haiku's ps output and how
+ they are run
+
+Team                                                  Id #Threads
+kernel_team                                            1       31
+/boot/system/servers/registrar                        40        6
+/boot/system/servers/debug_server                     45        2
+/boot/system/servers/net_server                       46        4
+/boot/system/servers/app_server                       47       28
+/boot/system/servers/syslog_daemon                    65        2
+/boot/system/servers/input_server                     71        9
+/boot/common/bin/sshd -D                              75        1
+/boot/system/servers/mount_server                     83        1
+/boot/system/Tracker                                  93        8
+/boot/system/Deskbar                                  94        4
+/boot/system/servers/media_server                     95        6
+/boot/system/servers/midi_server                      96        3
+/boot/system/servers/print_server                     97        2
+/boot/system/servers/cddb_daemon                      99        1
+/boot/system/servers/notification_server             100        2
+/boot/system/servers/media_addon_server              135        7
