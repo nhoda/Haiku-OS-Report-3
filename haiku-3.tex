@@ -44,12 +44,13 @@ Inc. throughout the 1990s, which focused on digital media work
 \cite{BeosWiki}.
 
 BeOS boasted an object-oriented C++ API, a fully integrated graphical
-user environment, a modern multiprocessing, preemptively multitasking
-kernel, a journaling file system with a relational database-like
-metadata facility \cite{BFSWiki} and included partial POSIX
-compatibility.  However, despite having a devoted niche user base, it
-could not yield a profit for Be, Inc. and, in 2001, was acquired by
-Palm, Inc., ending further BeOS development \cite{BeosWiki}.
+user environment, a modern multi-processing, pre-emptively
+multi-tasking kernel, a journaling file system with a relational
+database-like metadata facility \cite{BFSWiki} and included partial
+POSIX compatibility.  However, despite having a devoted niche user
+base, it could not yield a profit for Be, Inc. and, in 2001, was
+acquired by Palm, Inc., ending further BeOS
+development \cite{BeosWiki}.
 
 Disappointed with the loss, a group of BeOS enthusiasts began an
 effort to rewrite BeOS as a free and open source project
@@ -461,7 +462,7 @@ process.\cite{TappeOnPackages}
 In this section we will discuss major third party packages included in
 Haiku Release 1 Alpha 3.  Third party software is included in the
 Haiku base via two main mechanisms: as forks from the upstream version
-and as ports using the haiku ports framework \cite{HaikuR1A3Src}.  The
+and as ports using the Haiku ports framework \cite{HaikuR1A3Src}.  The
 forks themselves fall into two categories, those tracking an upstream
 version, and those maintained by Haiku developers more or less
 independently.  In some cases the package is maintained independently
@@ -579,7 +580,7 @@ etc.), GNU tar, GNU sed, GNU grep, OpenSSH, p7zip, GNU make and bzip2.
 Of these, recursive diffs and patch files \cite{HaikuR1A3Src} indicate
 that only coreutils had any sizable modifications.  There, most of the
 changes had to do with adding support for copying file meta data known
-as ``attributes,'' a special feature of the BFS filesystem
+as ``attributes,'' a special feature of the BFS file system
 \cite{BFSWiki}.  The other utilities were either unmodified or
 modified just for porting purposes with the addition of preprocessor
 defines.
@@ -605,7 +606,7 @@ the Mozilla engine.  It may be because of WebKit's growing market
 share and its backing by the major corporations Google and Apple.
 
 \paragraph{Email}
-Haiku includes its own e-mail application based on the original open
+Haiku includes its own email application based on the original open
 sourced BeOS Mail application \cite{BeMailOpenSourced} which it
 appears Be, Inc. released in 2001 \cite{BeMailLICENSE}.  The Haiku
 version has been modified to support multiple accounts
@@ -664,7 +665,7 @@ the BeOS logging capabilities are built in Haiku \cite{SyslogInfo}.
 \paragraph{mount\_server}
 A service that listens for system messages indicating new media has
 been detected and automatically mounts associated
-filesystems.\cite{AutoMounter}
+file systems.\cite{AutoMounter}
 
 \paragraph{Tracker}
 An application that provides one-stop access to file system
