@@ -652,15 +652,22 @@ called \texttt{Bootscript}, which the kernel calls upon directly to
 initialize applications and services when Haiku
 starts. \texttt{Bootscript} also calls upon
 a \texttt{SetupEnvironment} script that initializes important
-environment variables. Below is a short list of just a few of the
-applications and services that start when Haiku is initialized, in
-order of initialization.
+environment variables. Below is a list of the applications and
+services that start when Haiku is initialized, in order of
+initialization.
+
+\paragraph{kernel\_team}
+XXX (if this is the kernel itself---which it probably is---then we
+won't need to describe it here)
 
 \paragraph{registrar}
 A service in charge of maintaining information about MIME
 (Multipurpose Internet Mail Extensions) types and identifying the
 types of files in order to fill out their type
 attributes. \cite{RegistrarInfo}
+
+\paragraph{debug\_server}
+XXX
 
 \paragraph{net\_server}
 A service responsible for configuring network
@@ -673,6 +680,12 @@ the display device as a shared resource.''\cite{AppServer}
 \paragraph{syslog\_daemon}
 A service providing the syslog interface defined in POSIX upon which
 the BeOS logging capabilities are built in Haiku \cite{SyslogInfo}.
+
+\paragraph{input\_server}
+XXX
+
+\paragraph{OpenSSH Daemon (\texttt{sshd})}
+XXX
 
 \paragraph{mount\_server}
 A service that listens for system messages indicating new media has
@@ -692,14 +705,33 @@ bringing up menus that provide access to applications, shutdown/sleep
 functionality, recent documents, system preferences, and
 more.\cite{Deskbar}
 
-This was all discovered through a fortunate accident, finding
-the \texttt{Bootscript} in its logical
-location, \texttt{/boot/system/boot/}. Several scripts are found in
+\paragraph{media\_server}
+XXX
+
+\paragraph{midi\_server}
+XXX
+
+\paragraph{print\_server}
+XXX
+
+\paragraph{cddb\_server}
+XXX
+
+\paragraph{notification\_server}
+XXX
+
+\paragraph{media\_addon\_server}
+XXX
+
+This was all discovered through a fortunate accident, finding the
+Haiku \texttt{Bootscript} in its logical
+location, \texttt{/boot/system/boot/}.  Several scripts are found in
 this directory, and a \texttt{more} on Bootscript revealed its
 importance in Haiku's boot process. A \texttt{grep} on the kernel
-source files confirmed that \texttt{Bootscript} was indeed solely
-responsible for the order of application and service initialization in
-Haiku.
+source files revealed that \texttt{Bootscript} is called directly from
+the last stage of the kernel initialization
+process \cite{HaikuKernelMain} and so is solely responsible for the
+order of application and service initialization in Haiku.
 
 \bibliography{haiku-3}{}
 \bibliographystyle{plain}

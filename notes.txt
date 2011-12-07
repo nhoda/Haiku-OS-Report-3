@@ -1,8 +1,22 @@
 -make sure all command names use typewriter text (e.g. \texttt{diff})
--describe all the following processes in haiku's ps output and how
- they are run
--refer to the file in the kernel sources that calls Bootscript
+-describe the following Haiku processes
 
+Services left to describe:
+--------------------------
+-kernel_team (this is probably just the kernel itself)
+-debug_server
+-intput_server
+-sshd
+-media_server
+-midi_server
+-print_server
+-cddb_daemon
+-notification_server
+-media_addon_server
+
+
+Haiku ps output (minus Terminal, bash, ps):
+-------------------------------------------
 Team                                                  Id #Threads
 kernel_team                                            1       31
 /boot/system/servers/registrar                        40        6
