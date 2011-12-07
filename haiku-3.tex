@@ -1,4 +1,4 @@
-\title{\textbf{Haiku}\\OS Report}
+\title{\textbf{Haiku}\\Operating System Report}
 \author{COMP 3000\\ \\Troy Hildebrandt\\Nima Hoda}
 \date{\today}
 
@@ -36,21 +36,21 @@
 \section{Background}
 
 Haiku is a portable \cite{HaikuFaq} free and open source
-\cite{HaikuDevFaq} operating system for the 32-bit x86 architecture
+\cite{HaikuDevFaq} OS (Operating System) for the 32-bit x86 architecture
 \cite{HaikuFaq} targeting personal computing \cite{HaikuAbout}.  It
 was originally named OpenBeOS after BeOS \cite{HaikuWiki}, the
-short-lived proprietary operating system developed by Be,
-Inc. throughout the 1990s, which focused on digital media work
+short-lived proprietary OS developed by Be, Inc. throughout the 1990s,
+which focused on digital media work
 \cite{BeosWiki}.
 
-BeOS boasted an object-oriented C++ API, a fully integrated graphical
-user environment, a modern multi-processing, pre-emptively
-multi-tasking kernel, a journaling file system with a relational
-database-like metadata facility \cite{BFSWiki} and included partial
-POSIX compatibility.  However, despite having a devoted niche user
-base, it could not yield a profit for Be, Inc. and, in 2001, was
-acquired by Palm, Inc., ending further BeOS
-development \cite{BeosWiki}.
+BeOS boasted an object-oriented C++ API (Application Programming
+Interface), a fully integrated graphical user environment, a modern
+multi-processing, pre-emptively multi-tasking kernel, a journaling
+file system with a relational database-like metadata
+facility \cite{BFSWiki} and included partial POSIX compatibility.
+However, despite having a devoted niche user base, it could not yield
+a profit for Be, Inc. and, in 2001, was acquired by Palm, Inc., ending
+further BeOS development \cite{BeosWiki}.
 
 Disappointed with the loss, a group of BeOS enthusiasts began an
 effort to rewrite BeOS as a free and open source project
@@ -74,13 +74,13 @@ System with, its advanced meta-data capabilities \cite{BFSWiki}.
 
 Haiku is targeted towards the personal computer user
 \cite{HaikuAbout}.  As such, it includes a fully integrated GUI
-environment, rejecting the stacked nature of the X Window System on
-UNIX-like operating systems \cite{HaikuFaq}.  The personal computing
-focus is also reflected in Haiku's current lack of support for
-multi-user operation, though are plans for such support in future
-releases \cite{HaikuFuture}.  Haiku also aims to present a unified
-human interface, both in terms of the operating system base as well as
-in applications developed for Haiku.  This is reflected in the
+(Graphical User Interface) environment, rejecting the stacked nature
+of the X Window System on UNIX-like OSes \cite{HaikuFaq}.  The
+personal computing focus is also reflected in Haiku's current lack of
+support for multi-user operation, though are plans for such support in
+future releases \cite{HaikuFuture}.  Haiku also aims to present a
+unified human interface, both in terms of the OS base as well as in
+applications developed for Haiku.  This is reflected in the
 development and maintenance of comprehensive Haiku human interface and
 icon guidelines \cite{HaikuHIG, HaikuIcon}.
 
@@ -92,16 +92,17 @@ applications.  Several major BeOS R5 applications already run
 successfully on Haiku, including Opera, Firefox and Quake II
 \cite{HaikuWiki}.  POSIX compatibility is also a Haiku goal
 \cite{HaikuFuture, HaikuIncContracts}, as are the development of a
-BSD-style ports collection \cite{HaikuPorts}, which would simplify the
-building of 3rd party open-source software and a full package
-management system to manage installation and dependency resolution of
-3rd party software \cite{HaikuR1A3Notes}.
+BSD (Berkeley Software Distribution)-style ports
+collection \cite{HaikuPorts}, which would simplify the building of 3rd
+party open-source software and a full package management system to
+manage installation and dependency resolution of 3rd party
+software \cite{HaikuR1A3Notes}.
 
 Haiku development is centered around the Haiku Project, an
 international community of volunteers \cite{HaikuAbout}.  The project
-maintains mailing lists, forums, IRC channels, \cite{HaikuComm} source
-code repositories \cite{HaikuGetSvn} and several websites, including
-the following:
+maintains mailing lists, forums, IRC (Internet Relay Chat)
+channels, \cite{HaikuComm} source code repositories \cite{HaikuGetSvn}
+and several websites, including the following:
 \begin{itemize}
   \item \url{http://www.haiku-os.org/} -- the main project website
   \item \url{http://api.haiku-os.org/} -- containing Haiku API documentation
@@ -116,13 +117,13 @@ the following:
 There are 81 developers with commit access to the Haiku source code
 repository, with the top contributors ranking in the thousands of
 commits over many years \cite{HaikuContrib}.  The source code is
-revision controlled by an SVN repository and managed by Trac
+revision controlled by a subversion repository and managed by Trac
 \cite{HaikuDevStart}.  Write access to the repository is granted to
 contributors on the basis of past contributions \cite{HaikuDevStart}.
 
 In addition to voluntary contributions, the Haiku Project has also
-participated in the Google Summer of Code (GSOC)---a program that
-provides stipends to students who contribute to open-source software
+participated in GSOC (Google Summer of Code)---a program that provides
+stipends to students who contribute to open-source software
 \cite{GSOCWiki}---every year since 2007 \cite{HaikuGSOC}.  In 2010,
 Haiku took contributions from seven students through GSOC
 \cite{HaikuGSOC2010}.  Contributors are also sometimes contracted to
@@ -145,13 +146,17 @@ pre-built software for Haiku as well as a hub for Haiku end-users
 
 Haiku Release 1 Alpha 3 was published on June 20, 2011
 \cite{HaikuRelease}.  It is available for free download from various
-FTP and HTTP mirrors in the following formats \cite{HaikuGet}:
+FTP (File Transfer Protocol) and HTTP (Hypertext Transfer Protocol)
+mirrors in the following formats \cite{HaikuGet}:
 \begin{itemize}
 \item ``Anyboot'' images -- which may be written to and booted from
-  USB flash drives, hard disk drives or CD/DVD media
-\item ISO images -- which may be written to CD media
-\item VMDK images -- which are virtual machine disk files compatible
-  with VMWare products as well as QEMU and VirtualBox \cite{VMDKWiki}
+  USB (Universal Serial Bus) flash drives, hard disk drives or CD
+  (Compact Disc)/DVD media
+\item ISO (International Organization for Standardization) images
+  -- which may be written to CD media
+\item VMDK (Virtual Machine Disk Format) images -- which are virtual
+  machine disk files compatible with VMWare products as well as QEMU
+  and VirtualBox \cite{VMDKWiki}
 \end{itemize}
 Any of the image formats may be used live, to try Haiku without
 installing it, or to install Haiku to another disk volume
@@ -166,17 +171,18 @@ code repository \cite{HaikuGetSvn} and nightly snapshot builds are
 available as downloadable images from the Haiku Files archive
 \cite{HaikuFiles}.
 
-The Haiku release (Anyboot) is approximately 250MB in size compressed
-\cite{HaikuGet} and 700MB uncompressed.  The installed system also
-takes up about 700MB of disk space, not including the size of a swap
-file, which is 2GB by default.  The source distribution is split into
-two files.  One containing the Haiku build tools, comprised almost
-entirely of customized third party software (e.g. GCC, binutils) and
-having an uncompressed size of about 530MB, and the other containing
-the Haiku system sources proper and having approximately the same
-uncompressed size \cite{HaikuR1A3Src}.  The Haiku system sources
-contain about 5.5 million lines of C and C++ code and headers, not
-including blank or comment lines, as reported by CLOC \cite{Cloc}.
+The Haiku release (Anyboot) is approximately 250MB (megabytes) in size
+compressed \cite{HaikuGet} and 700MB uncompressed.  The installed
+system also takes up about 700MB of disk space, not including the size
+of a swap file, which is 2GB (gigabytes) by default.  The source
+distribution is split into two files.  One containing the Haiku build
+tools, comprised almost entirely of customized third party software
+(e.g. GCC (GNU Compiler Collection), binutils) and having an
+uncompressed size of about 530MB, and the other containing the Haiku
+system sources proper and having approximately the same uncompressed
+size \cite{HaikuR1A3Src}.  The Haiku system sources contain about 5.5
+million lines of C and C++ code and headers, not including blank or
+comment lines, as reported by CLOC (Count Lines of Code) \cite{Cloc}.
 
 \section{Installation Procedure}
 
@@ -203,16 +209,16 @@ selected just in case.
 \end{figure}
 
 Installation began by selecting the Haiku disc ISO to be used for the
-secondary IDE device in the Storage Settings for my Haiku guest, and a
-first boot was initiated.  After a simple language select, a quick and
-painless format of my 4GB partition to the Be File system
-(\figref{install-partition}), my partition was ready to be selected
-from a drop down list and the install could begin
-(\figref{install-progress}).  This process could simply not have been
-more painless, and there were absolutely no surprises or hurdles to
-overcome during the process.  After the progress bar reached the end,
-I chose the ``Quit'' option and the system rebooted to be used for the
-first time.
+secondary IDE (Integrated Drive Electronics) device in the Storage
+Settings for my Haiku guest, and a first boot was initiated.  After a
+simple language select, a quick and painless format of my 4GB
+partition to the Be file system (\figref{install-partition}), my
+partition was ready to be selected from a drop down list and the
+install could begin (\figref{install-progress}).  This process could
+simply not have been more painless, and there were absolutely no
+surprises or hurdles to overcome during the process.  After the
+progress bar reached the end, I chose the ``Quit'' option and the
+system rebooted to be used for the first time.
 
 \section{Startup}
 
@@ -284,13 +290,13 @@ Following the download's completion, the most obvious feature was its
 file extension, .PKG. Not recognizing this immediately as a BeOS
 installation package, a double click revealed a very simple
 auto-install process that I promptly allowed to install to its default
-directory, /boot/apps.  The file system in BeOS/Haiku is very similar
-to that of a Unix OS, despite Haiku not being a Unix based operating
-system, and as such the directory structure looks very similar to Unix
-systems.  Haiku comes with a Bash terminal, with instantly
-recognizable Unix commands such as ls, chmod, pwd, and many others
-(\figref{using-terminal}).  The mounting of a CD is automatic, and
-very easily accessible once inserted, either from a link on the
+directory, /boot/apps.  The file system hierarchy in BeOS/Haiku is
+very similar to that of a Unix OS, despite Haiku not being a Unix
+based operating system, and as such the directory structure looks very
+similar to Unix systems.  Haiku comes with a Bash terminal, with
+instantly recognizable Unix commands such as ls, chmod, pwd, and many
+others (\figref{using-terminal}).  The mounting of a CD is automatic,
+and very easily accessible once inserted, either from a link on the
 desktop, or from the root directory, based on what the name of the CD
 is.  In this case, I could access the files on the Quake II CD from
 /Quake2, and the files from the installation of BeOS Quake II at
@@ -310,9 +316,9 @@ version was necessary because the CD was the Windows version, and
 availability of a native BeOS installer is unlikely.
 
 The first noticeable problems were both the obviously broken and
-ear-piercing sound which caused me to mute my PC, and the
-excruciatingly slow Mesa software OpenGL implementation that the game
-defaulted to.  This is a result of no Guest Additions and no
+ear-piercing sound which caused me to mute my PC (Personal Computer),
+and the excruciatingly slow Mesa software OpenGL implementation that
+the game defaulted to.  This is a result of no Guest Additions and no
 virtualized OpenGL 3D-acceleration, and as a result, I switched to
 pure software rendering mode which ended up working out nicely
 (\figref{using-quake-play}).  However, attempting to start a game
@@ -546,9 +552,10 @@ good fit for a BeOS clone as well as made BeOS enthusiasts aware of
 NewOS.
 
 \paragraph{C Library}
-Haiku includes a fork of the GNU C Library in its libroot library, as
-did BeOS \cite{GlibCWiki}.  It appears from the commit logs that much
-of the 2.2.5 version of glibc was imported into the Haiku fork
+Haiku includes a fork of the GNU (Gnu's Not Unix) C Library in its
+libroot library, as did BeOS \cite{GlibCWiki}.  It appears from the
+commit logs that much of the 2.2.5 version of glibc was imported into
+the Haiku fork
 \cite{HaikuLibrootGlibcOld} but that parts of the 2.3.x versions were
 also brought in on a piecemeal basis \cite{HaikuLibrootGlibcRecent} so
 it's difficult to specify exactly which upstream version Haiku's glibc
@@ -568,13 +575,13 @@ BeOS APIs.
 \paragraph{Shells}
 Like BeOS, Haiku includes a terminal application which provides a
 command-line interface with GNU bash.  A recursive diff\footnote{A
-recursive diff is a full line by line comparison of one source
-directory with another similar source directory.  A diff is generated
-using the diff utility, whose output contains only the differences
-between files in the two source directories.} between Haiku's bash
-sources and the ones from its upstream source show relatively few
-changes, most of which appear to have more to do with porting the
-shell than with modifying it (i.e. preprocessor defines).
+recursive diff is a full line by line comparison of one source tree
+with another (usually) derived source tree.  The diff is generated
+using the \texttt{diff} utility, whose output contains only the
+differences between the files in the two source directories.} between
+Haiku's bash sources and the ones from its upstream source show
+relatively few changes, most of which appear to have more to do with
+porting the shell than with modifying it (i.e. preprocessor defines).
 
 \paragraph{Utilities}
 In order to support the command-line environment, Haiku includes a
@@ -584,7 +591,7 @@ etc.), GNU tar, GNU sed, GNU grep, OpenSSH, p7zip, GNU make and bzip2.
 Of these, recursive diffs and patch files \cite{HaikuR1A3Src} indicate
 that only coreutils had any sizable modifications.  There, most of the
 changes had to do with adding support for copying file meta data known
-as ``attributes,'' a special feature of the BFS file system
+as ``attributes,'' a special feature of BFS (Be File System)
 \cite{BFSWiki}.  The other utilities were either unmodified or
 modified just for porting purposes with the addition of preprocessor
 defines.
@@ -650,8 +657,9 @@ applications and services that start when Haiku is initialized, in
 order of initialization.
 
 \paragraph{registrar}
-A service in charge of maintaining information about MIME types and
-identifying the types of files in order to fill out their type
+A service in charge of maintaining information about MIME
+(Multipurpose Internet Mail Extensions) types and identifying the
+types of files in order to fill out their type
 attributes. \cite{RegistrarInfo}
 
 \paragraph{net\_server}
