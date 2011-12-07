@@ -1,6 +1,7 @@
 -make sure all command names use typewriter text (e.g. \texttt{diff})
 -describe all the following processes in haiku's ps output and how
  they are run
+-refer to the file in the kernel sources that calls Bootscript
 
 Team                                                  Id #Threads
 kernel_team                                            1       31
