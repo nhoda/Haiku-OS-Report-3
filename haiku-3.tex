@@ -575,14 +575,14 @@ BeOS APIs.
 \paragraph{Shells}
 Like BeOS, Haiku includes a terminal application which provides a
 command-line interface with GNU \texttt{bash}.  A recursive
-diff\footnote{A recursive diff is a full line by line comparison of
-one source tree with another (usually) derived source tree.  The diff
-is generated using the \texttt{diff} command, whose output contains
-only the differences between the files in the two source directories.}
-between Haiku's \texttt{bash} sources and the ones from its upstream
-source show relatively few changes, most of which appear to have more
-to do with porting the shell than with modifying it (i.e. preprocessor
-defines).
+\texttt{diff}\footnote{A recursive \texttt{diff} is a full line
+by line comparison of one source tree with another (usually) derived
+source tree.  The \texttt{diff} is generated using the \texttt{diff}
+command, whose output contains only the differences between the files
+in the two source directories.}  between Haiku's \texttt{bash} sources
+and the ones from its upstream source show relatively few changes,
+most of which appear to have more to do with porting the shell than
+with modifying it (i.e. preprocessor defines).
 
 \paragraph{Utilities}
 In order to support the command-line environment, Haiku includes a
@@ -591,10 +591,11 @@ packages, including GNU coreutils (\texttt{cat},
 texttt{cp}, \texttt{echo}, \texttt{ls}, \texttt{mv}, \texttt{mkdir},
 \texttt{true}, etc.), GNU \texttt{tar}, GNU \texttt{sed}, GNU
 \texttt{grep}, OpenSSH, p7zip, GNU \texttt{make} and \texttt{bzip2}.
-Of these, recursive diffs and patch files \cite{HaikuR1A3Src} indicate
-that only coreutils had any sizable modifications.  There, most of the
-changes had to do with adding support for copying file meta data known
-as ``attributes,'' a special feature of BFS (Be File System)
+Of these, recursive \texttt{diff}s and patch files \cite{HaikuR1A3Src}
+indicate that only coreutils had any sizable modifications.  There,
+most of the changes had to do with adding support for copying file
+meta data known as ``attributes,'' a special feature of BFS (Be File
+System)
 \cite{BFSWiki}.  The other utilities were either unmodified or
 modified just for porting purposes with the addition of preprocessor
 defines.
@@ -609,9 +610,9 @@ Haiku includes the WebKit-based WebPositive as its default web browser
 \cite{WebPositiveWiki}.  Though WebPositive is developed specifically
 for Haiku, it's sources are kept in a separate repository
 \cite{WebPositiveTrac} that includes a fork of the WebKit engine.  A
-recursive diff of the WebPositive WebKit and the WebKit revision it's
-based on results in a more than 25,000 line patch, indicating heavy
-modifications to the upstream source.
+recursive \texttt{diff} of the WebPositive WebKit and the WebKit
+revision it's based on results in a more than 25,000 line patch,
+indicating heavy modifications to the upstream source.
 
 WebPositive was developed to replace the old Firefox2-based
 BeZillaBrowser \cite{WebPositiveWiki}.  It's unclear why Haiku
@@ -633,10 +634,10 @@ applications and permit the porting of modern packages, Haiku includes
 both GCC 2.95.3 and GCC 4.4.4 \cite{GCCHybrids}.  GCC is an essential
 part of Haiku allowing the OS to be self-hosting (build itself) and to
 build third party software packages.  The GCC 4.4.4 in Haiku is
-relatively unmodified: a recursive diff with the upstream 4.4.4
-produces only a 1,600 line patch.  Haiku's GCC 2.95.3, however, is
-very heavily modified, producing a 45,000 line patch when compared to
-its upstream source.
+relatively unmodified: a recursive \texttt{diff} with the upstream
+4.4.4 produces only a 1,600 line patch.  Haiku's GCC 2.95.3, however,
+is very heavily modified, producing a 45,000 line patch when compared
+to its upstream source.
 
 Another integral part of the Haiku build system is a \texttt{make}-like
 dependency-based build framework called Jam.  The Haiku developers
@@ -659,34 +660,34 @@ environment variables. Below is a list of the applications and
 services that start when Haiku is initialized, in order of
 initialization.
 
-\paragraph{registrar}
+\paragraph{\texttt{registrar}}
 A service in charge of maintaining information about MIME
 (Multipurpose Internet Mail Extensions) types and identifying the
 types of files in order to fill out their type
 attributes. \cite{RegistrarInfo}
 
-\paragraph{debug\_server}
+\paragraph{\texttt{debug\_server}}
 XXX
 
-\paragraph{net\_server}
-A service responsible for configuring network
-interfaces. \cite{NetServerSource}
+\paragraph{\texttt{net\_server}}
+A service responsible for configuring network interfaces and bringing
+up network services. \cite{NetServerSource}
 
-\paragraph{app\_server}
+\paragraph{\texttt{app\_server}}
 ``At the heart, it manages multiple applications simultaneously using
 the display device as a shared resource.''\cite{AppServer}
 
-\paragraph{syslog\_daemon}
+\paragraph{\texttt{syslog\_daemon}}
 A service providing the syslog interface defined in POSIX upon which
 the BeOS logging capabilities are built in Haiku \cite{SyslogInfo}.
 
-\paragraph{input\_server}
+\paragraph{\texttt{input\_server}}
 XXX
 
 \paragraph{OpenSSH Daemon (\texttt{sshd})}
 XXX
 
-\paragraph{mount\_server}
+\paragraph{\texttt{mount\_server}}
 A service that listens for system messages indicating new media has
 been detected and automatically mounts associated
 file systems.\cite{AutoMounter}
@@ -704,33 +705,46 @@ bringing up menus that provide access to applications, shutdown/sleep
 functionality, recent documents, system preferences, and
 more.\cite{Deskbar}
 
-\paragraph{media\_server}
+\paragraph{\texttt{media\_server}}
 XXX
 
-\paragraph{midi\_server}
+\paragraph{\texttt{midi\_server}}
 XXX
 
-\paragraph{print\_server}
+\paragraph{\texttt{print\_server}}
 XXX
 
-\paragraph{cddb\_server}
+\paragraph{\texttt{cddb\_server}}
 XXX
 
-\paragraph{notification\_server}
+\paragraph{\texttt{notification\_server}}
 XXX
 
-\paragraph{media\_addon\_server}
+\paragraph{\texttt{media\_addon\_server}}
 XXX
 
-This was all discovered through a fortunate accident, finding the
-Haiku \texttt{Bootscript} in its logical
-location, \texttt{/boot/system/boot/}.  Several scripts are found in
-this directory, and a \texttt{more} on Bootscript revealed its
-importance in Haiku's boot process. A \texttt{grep} on the kernel
-source files revealed that \texttt{Bootscript} is called directly from
-the last stage of the kernel initialization
-process \cite{HaikuKernelMain} and so is solely responsible for the
-order of application and service initialization in Haiku.
+Other than the \texttt{input\_server}, \texttt{sshd} and
+the \texttt{media\_addon\_server}, all of these applications and
+services are executed by the Haiku \texttt{Bootscript} located in its
+logical location, \texttt{/boot/system/boot/}.
+The \texttt{Bootscript} itself is executed directly from the kernel
+during the last stage of its initialization
+process \cite{HaikuKernelMain}.  The \texttt{Bootscript} was found
+just by exploring the filsystem hierarchy and its execution by the
+kernel was confirmed with a recursive \texttt{grep}\footnote{A
+recursive \texttt{grep} searches the files in a directory tree for
+particular patterns.} of the kernel sources.
+
+The \texttt{input\_server} is started by
+the \texttt{app\_server} \cite{AppServerDesktopSource}, \texttt{sshd}
+is started by
+the \texttt{net\_server} \cite{NetServerSettingsSource} \cite{NetServerServicesSource}
+based on the contents of the
+file \texttt{/boot/common/settings/network/services} and
+the \texttt{media\_addon\_server} is started by
+the \texttt{media\_server} \cite{MediaServerSource}.  These were all
+discovered by recursive \texttt{grep}s of the filesystem hierarchy and
+the Haiku sources.
 
 \bibliography{haiku-3}{}
 \bibliographystyle{plain}
