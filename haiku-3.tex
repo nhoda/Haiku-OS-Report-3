@@ -667,7 +667,9 @@ types of files in order to fill out their type
 attributes. \cite{RegistrarInfo}
 
 \paragraph{\texttt{debug\_server}}
-XXX
+A service that alerts the user when a service or application has
+crashed and which may employ a debugger at crash
+time. \cite{DebugServerLog}
 
 \paragraph{\texttt{net\_server}}
 A service responsible for configuring network interfaces and bringing
@@ -682,10 +684,13 @@ A service providing the syslog interface defined in POSIX upon which
 the BeOS logging capabilities are built in Haiku \cite{SyslogInfo}.
 
 \paragraph{\texttt{input\_server}}
-XXX
+``The Input Server is a system service that accepts user events (on
+the mouse and keyboard, typically) at one end, and dispatches them to
+the App Server at the other.''\cite{BeBookInputServer}
 
 \paragraph{OpenSSH Daemon (\texttt{sshd})}
-XXX
+A service that allows encrypted shell access to the BeOS
+system. \cite{OpenSSH}
 
 \paragraph{\texttt{mount\_server}}
 A service that listens for system messages indicating new media has
@@ -709,12 +714,20 @@ more.\cite{Deskbar}
 XXX
 
 \paragraph{\texttt{midi\_server}}
-XXX
+A service that performs the ``behind-the-scenes'' work for the Haiku
+Midi Kit, ``the API that implements support for generating,
+processing, and playing music in MIDI format,'' including managing the
+producers and consumers of MIDI data and the connections between
+them. \cite{HaikuBookMidi}
 
 \paragraph{\texttt{print\_server}}
-XXX
+``...presents most of the functionality of the printing architecture
+of BeOS... The requests to the print\_server range from selecting a
+printer to putting up a page setup dialog for a specific printer. Also
+removing or adding a printer is actually done by the
+print\_server.'' \cite{HaikuScripting}
 
-\paragraph{\texttt{cddb\_server}}
+\paragraph{\texttt{cddb\_daemon}}
 XXX
 
 \paragraph{\texttt{notification\_server}}
