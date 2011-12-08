@@ -281,7 +281,7 @@ the same version that used to be found on BeDepot.
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.9\textwidth]{figs/using-terminal.png}
-\caption{A Bash terminal window open in Haiku.}
+\caption{A \texttt{bash} terminal window open in Haiku.}
 \label{fig:using-terminal}
 \end{figure}
 
@@ -292,10 +292,11 @@ auto-install process that I promptly allowed to install to its default
 directory, /boot/apps.  The file system hierarchy in BeOS/Haiku is
 very similar to that of a Unix OS, despite Haiku not being a Unix
 based operating system, and as such the directory structure looks very
-similar to Unix systems.  Haiku comes with a Bash terminal, with
-instantly recognizable Unix commands such as ls, chmod, pwd, and many
-others (\figref{using-terminal}).  The mounting of a CD is automatic,
-and very easily accessible once inserted, either from a link on the
+similar to Unix systems.  Haiku comes with a \texttt{bash} terminal,
+with instantly recognizable Unix commands such
+as \texttt{ls}, \texttt{chmod}, \texttt{pwd}, and many others
+(\figref{using-terminal}).  The mounting of a CD is automatic, and
+very easily accessible once inserted, either from a link on the
 desktop, or from the root directory, based on what the name of the CD
 is.  In this case, I could access the files on the Quake II CD from
 /Quake2, and the files from the installation of BeOS Quake II at
@@ -485,29 +486,29 @@ NewOS Kernel & Yes & \string~2002 (snapshot)\footnotemark[1] & 20050620\footnote
 \midrule
 GNU libc & Yes & \string~2.2.5-2.3.5 (2005)\footnotemark[2] & 2.14.1 (2011-10-07) \\
 \midrule
-GNU bash & Yes & 4.0.35 (2009-10-24)\footnotemark[3] & 4.2.10 (2011-05-03) \\
+GNU \texttt{bash} & Yes & 4.0.35 (2009-10-24)\footnotemark[3] & 4.2.10 (2011-05-03) \\
 \midrule
 GNU coreutils & Yes & 8.4 (2010-01-13)\footnotemark[4] & 8.14 (2011-10-12) \\
 \midrule
-GNU tar & No & 1.25 (2010-11-07)\footnotemark[5] & 1.26 (2011-03-13) \\
+GNU \texttt{tar} & No & 1.25 (2010-11-07)\footnotemark[5] & 1.26 (2011-03-13) \\
 \midrule
-GNU sed & No & 4.2.1 (2009-06-27)\footnotemark[6] & 4.2.1 (2009-06-27) \\
+GNU \texttt{sed} & No & 4.2.1 (2009-06-27)\footnotemark[6] & 4.2.1 (2009-06-27) \\
 \midrule
-GNU grep & Yes & 2.5.1 (2002-03-26)\footnotemark[7] & 2.9 (2011-06-21) \\
+GNU \texttt{grep} & Yes & 2.5.1 (2002-03-26)\footnotemark[7] & 2.9 (2011-06-21) \\
 \midrule
-GNU make & No & 3.82 (2010-07-28)\footnotemark[8] & 3.82 (2010-07-28) \\
+GNU \texttt{make} & No & 3.82 (2010-07-28)\footnotemark[8] & 3.82 (2010-07-28) \\
 \midrule
 OpenSSH & No & 5.8p2 (2011-05-02)\footnotemark[9]  & 5.9p1 (2011-09-06) \\
 \midrule
 p7zip & No & 9.13 (2010-05-30)\footnotemark[10] & 9.20.1 (2011-03-16) \\
 \midrule
-bzip2 & No & 1.0.6 (2010-09-20)\footnotemark[11] & 1.0.6 (2010-09-20) \\
+\texttt{bzip2} & No & 1.0.6 (2010-09-20)\footnotemark[11] & 1.0.6 (2010-09-20) \\
 \midrule
 WebKit & Yes & r57734 (2010-04-09)\footnotemark[12] & r100096 (2011-11-13)\footnotemark[16] \\
 \midrule
-gcc2 & Yes & 2.95.3 (2001-03-16)\footnotemark[13] & 4.6.2 (2011-10-26) \\
+\texttt{gcc2} & Yes & 2.95.3 (2001-03-16)\footnotemark[13] & 4.6.2 (2011-10-26) \\
 \midrule
-gcc4 & Yes & 4.4.4 (2010-04-29)\footnotemark[14] & 4.6.2 (2011-10-26) \\
+\texttt{gcc4} & Yes & 4.4.4 (2010-04-29)\footnotemark[14] & 4.6.2 (2011-10-26) \\
 \midrule
 Perforce Jam & Yes & 2.5 (2003-04)\footnotemark[15] & 2.5 (2003-04) \\
 \bottomrul
@@ -573,20 +574,23 @@ BeOS APIs.
 
 \paragraph{Shells}
 Like BeOS, Haiku includes a terminal application which provides a
-command-line interface with GNU bash.  A recursive diff\footnote{A
-recursive diff is a full line by line comparison of one source tree
-with another (usually) derived source tree.  The diff is generated
-using the \texttt{diff} utility, whose output contains only the
-differences between the files in the two source directories.} between
-Haiku's bash sources and the ones from its upstream source show
-relatively few changes, most of which appear to have more to do with
-porting the shell than with modifying it (i.e. preprocessor defines).
+command-line interface with GNU \texttt{bash}.  A recursive
+diff\footnote{A recursive diff is a full line by line comparison of
+one source tree with another (usually) derived source tree.  The diff
+is generated using the \texttt{diff} command, whose output contains
+only the differences between the files in the two source directories.}
+between Haiku's \texttt{bash} sources and the ones from its upstream
+source show relatively few changes, most of which appear to have more
+to do with porting the shell than with modifying it (i.e. preprocessor
+defines).
 
 \paragraph{Utilities}
 In order to support the command-line environment, Haiku includes a
 variety of command-line utilities from various third party software
-packages, including GNU coreutils (cat, cp, echo, ls, mv, mkdir, true,
-etc.), GNU tar, GNU sed, GNU grep, OpenSSH, p7zip, GNU make and bzip2.
+packages, including GNU coreutils (\texttt{cat},
+texttt{cp}, \texttt{echo}, \texttt{ls}, \texttt{mv}, \texttt{mkdir},
+\texttt{true}, etc.), GNU \texttt{tar}, GNU \texttt{sed}, GNU
+\texttt{grep}, OpenSSH, p7zip, GNU \texttt{make} and \texttt{bzip2}.
 Of these, recursive diffs and patch files \cite{HaikuR1A3Src} indicate
 that only coreutils had any sizable modifications.  There, most of the
 changes had to do with adding support for copying file meta data known
@@ -626,15 +630,15 @@ fulfill Haiku's goal of reimplementing the BeOS experience.
 \paragraph{Build Tools}
 In order to maintain both backwards compatibility with BeOS R5
 applications and permit the porting of modern packages, Haiku includes
-both gcc 2.95.3 and gcc 4.4.4 \cite{GCCHybrids}.  gcc is an essential
+both GCC 2.95.3 and GCC 4.4.4 \cite{GCCHybrids}.  GCC is an essential
 part of Haiku allowing the OS to be self-hosting (build itself) and to
-build third party software packages.  The gcc 4.4.4 in Haiku is
+build third party software packages.  The GCC 4.4.4 in Haiku is
 relatively unmodified: a recursive diff with the upstream 4.4.4
-produces only a 1,600 line patch.  Haiku's gcc 2.95.3, however, is
+produces only a 1,600 line patch.  Haiku's GCC 2.95.3, however, is
 very heavily modified, producing a 45,000 line patch when compared to
 its upstream source.
 
-Another integral part of the Haiku build system is a make-like
+Another integral part of the Haiku build system is a \texttt{make}-like
 dependency-based build framework called Jam.  The Haiku developers
 maintain their own modified fork of Jam based on the upstream version
 2.5 \cite{UsingJam}.  The Haiku modifications produce an approximately
@@ -646,7 +650,7 @@ source tree.
 
 \section{Initialization}
 
-Haiku initializes itself through a Bash shell script
+Haiku initializes itself through a \texttt{bash} shell script
 called \texttt{Bootscript}, which the kernel calls upon directly to
 initialize applications and services when Haiku
 starts. \texttt{Bootscript} also calls upon
