@@ -4,13 +4,17 @@ Services left to describe:
 --------------------------
 -debug_server
 -intput_server
--sshd
+ -> http://www.freelists.org/post/haiku-appserver/openbeos-Re-Launching-the-input-server-from-the-app-server,1
+ -> started by app_server (src/servers/app/Desktop.cpp)
+-sshd: /Haiku/common/settings/network/services
+ -> started by net_server (src/servers/net/{Services,NetServer,Settings}.cpp)
 -media_server
 -midi_server
 -print_server
 -cddb_daemon
 -notification_server
 -media_addon_server
+ -> started from media_server (src/servers/media/media_server.cpp)
 
 Haiku ps output (minus Terminal, bash, ps):
 -------------------------------------------
