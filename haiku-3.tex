@@ -711,7 +711,11 @@ functionality, recent documents, system preferences, and
 more.\cite{Deskbar}
 
 \paragraph{\texttt{media\_server}}
-XXX
+One of several servers run on the Haiku kernel, providing core media
+stream processing functionality. ``The server manages the multimedia 
+streams through a pipeline of buffers that are dispatched to data 
+handlers. Each handler can hook into a media stream.''
+\cite{HaikuMediaServer}
 
 \paragraph{\texttt{midi\_server}}
 A service that performs the ``behind-the-scenes'' work for the Haiku
@@ -728,13 +732,23 @@ removing or adding a printer is actually done by the
 print\_server.'' \cite{HaikuScripting}
 
 \paragraph{\texttt{cddb\_daemon}}
-XXX
+This is the process that handles information retrieval from the CDDB
+(Compact Disc Database) to make the ripping of CDs as seamless as 
+possible by automatically retrieving track and album information.
 
 \paragraph{\texttt{notification\_server}}
-XXX
+Provides a centralized system with which applications can provide the 
+user with popup notifications for things like new e-mails and instant 
+messages. \cite{HaikuNotificationServer}
 
 \paragraph{\texttt{media\_addon\_server}}
-XXX
+Exposes the appropriate functionality to developers looking to expand
+Haiku's media stream reading and writing capabilities. Add-ons currently 
+include those for recognizing streams from USB webcams, utilizing OSS 
+(Open Sound System), and many more. All media add-ons are subclassed 
+objects of BMediaAddon. \cite{BMediaAddon} This was determined by looking
+through the media\_addon\_sources, and the sources for specific media 
+addons.
 
 Other than the \texttt{input\_server}, \texttt{sshd} and
 the \texttt{media\_addon\_server}, all of these applications and
