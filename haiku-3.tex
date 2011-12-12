@@ -44,7 +44,7 @@ which focused on digital media work
 
 BeOS boasted an object-oriented C++ API (Application Programming
 Interface), a fully integrated graphical user environment, a modern
-multi-processing, pre-emptively multi-tasking kernel, a journaling
+multi-processing, preemptively multi-tasking kernel, a journaling
 file system with a relational database-like metadata
 facility \cite{BFSWiki} and included partial POSIX compatibility.
 However, despite having a devoted niche user base, it could not yield
@@ -67,7 +67,7 @@ HaikuIcon} reflecting the ``core qualities'' of ``elegance'' and
 ``simplicity'' found in BeOS \cite{HaikuFaq}.  Haiku also directly
 incorporates two core BeOS user interface elements, the Tracker, a
 file manager, and the Deskbar, a taskbar, which were open sourced by
-Be, Inc. in 2001 \cite{HaikuFaq}.  Haiku also reimplements the
+Be, Inc. in 2001 \cite{HaikuFaq}.  Haiku also re-implements the
 object-oriented C++ BeOS API\cite{HaikuWiki} as well as the Be File
 System with, its advanced meta-data capabilities \cite{BFSWiki}.
 
@@ -560,7 +560,7 @@ the Haiku fork
 also brought in on a piecemeal basis \cite{HaikuLibrootGlibcRecent} so
 it's difficult to specify exactly which upstream version Haiku's glibc
 is derived from.  The logs also indicate much local modification of
-glibc.  Of course, a C library was necessary for Haiku to reimplement
+glibc.  Of course, a C library was necessary for Haiku to re-implement
 the BeOS API.  The GNU libc was most likely chosen over a BSD libc
 because BeOS itself included GNU libc \cite{GlibCWiki}.
 
@@ -569,7 +569,7 @@ Haiku provides its own GUI Foundation in \texttt{app\_server} and so
 does not require a 3rd party package such as x.org.
 
 \paragraph{GUI Toolkits}
-Haiku also provides its own GUI Toolkit in its reimplementation of the
+Haiku also provides its own GUI Toolkit in its re-implementation of the
 BeOS APIs.
 
 \paragraph{Shells}
@@ -626,7 +626,7 @@ sourced BeOS Mail application \cite{BeMailOpenSourced} which it
 appears Be, Inc. released in 2001 \cite{BeMailLICENSE}.  The Haiku
 version has been modified to support multiple accounts
 \cite{BeMailOpenSourced}.  This software was included in Haiku to help
-fulfill Haiku's goal of reimplementing the BeOS experience.
+fulfill Haiku's goal of re-implementing the BeOS experience.
 
 \paragraph{Build Tools}
 In order to maintain both backwards compatibility with BeOS R5
@@ -738,17 +738,16 @@ possible by automatically retrieving track and album information.
 
 \paragraph{\texttt{notification\_server}}
 Provides a centralized system with which applications can provide the 
-user with popup notifications for things like new e-mails and instant 
+user with pop-up notifications for things like new e-mails and instant 
 messages. \cite{HaikuNotificationServer}
 
 \paragraph{\texttt{media\_addon\_server}}
 Exposes the appropriate functionality to developers looking to expand
 Haiku's media stream reading and writing capabilities. Add-ons currently 
 include those for recognizing streams from USB webcams, utilizing OSS 
-(Open Sound System), and many more. All media add-ons are subclassed 
-objects of BMediaAddon. \cite{BMediaAddon} This was determined by looking
-through the media\_addon\_sources, and the sources for specific media 
-addons.
+(Open Sound System), and many more. All media add-ons inherit from 
+BMediaAddon. \cite{BMediaAddon} This was determined by looking through 
+the media\_addon\_sources, and the sources for specific media add-ons.
 
 Other than the \texttt{input\_server}, \texttt{sshd} and
 the \texttt{media\_addon\_server}, all of these applications and
@@ -757,7 +756,7 @@ logical location, \texttt{/boot/system/boot/}.
 The \texttt{Bootscript} itself is executed directly from the kernel
 during the last stage of its initialization
 process \cite{HaikuKernelMain}.  The \texttt{Bootscript} was found
-just by exploring the filsystem hierarchy and its execution by the
+just by exploring the filesystem hierarchy and its execution by the
 kernel was confirmed with a recursive \texttt{grep}\footnote{A
 recursive \texttt{grep} searches the files in a directory tree for
 particular patterns.} of the kernel sources.
